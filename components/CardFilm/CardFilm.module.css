@@ -1,0 +1,37 @@
+.previewMovie {
+  aspect-ratio: 3/5;
+  border-radius: 1em;
+  box-shadow: 0 0 10px #000000ab;
+  overflow: hidden;
+  transition: scale .2s linear;
+  background-color: rgb(229, 231, 231);
+
+  &:hover {
+    scale: 1.05;
+  }
+
+  & a {
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 .6em;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #000;
+    transition: color .15s linear;
+    &:hover {
+      color: darkred;
+      cursor: alias;
+    }
+    
+  }
+
+  .moviePoster {
+    cursor: pointer;  
+    height: 93%;
+    width: 100%;
+  }
+}
