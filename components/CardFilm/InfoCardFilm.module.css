@@ -1,0 +1,118 @@
+.infoFilm {
+  height: min(80vh, 800px);
+  width: min(80%, 900px);
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(249, 249, 249, 1) 55%, rgba(222, 222, 222, 1) 95%);
+  position: relative;
+  box-shadow: 0 0 30px #000;
+  display: flex;
+  box-sizing: border-box;
+  transition: scale .2s linear;
+}
+
+.info {
+  padding: 2em 1em;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 18px;
+  gap: 10px;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  & a {
+    text-decoration: none;
+    color: #000;
+    transition: color .2s linear;
+
+    &:hover {
+      color: darkred;
+      cursor: alias;
+    }
+  }
+}
+
+span.plot {
+  font-weight: normal;
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+}
+
+.info>span>span {
+  margin-left: 0.2em;
+  font-weight: normal;
+}
+
+.info>span {
+  font-weight: bold;
+}
+
+.title {
+  margin: 0;
+  font-size: 34px;
+
+}
+
+.shortInfo {
+  font-size: 16px;
+  display: block;
+  color: rgb(121, 121, 121);
+}
+
+.genre {
+  margin-left: 0.2em;
+}
+
+.poster {
+  width: 50%;
+
+  & img {
+    height: 100%;
+    aspect-ratio: 3/4;
+  }
+
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: opacity ease 0.5s;
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

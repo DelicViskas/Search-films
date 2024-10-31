@@ -22,15 +22,16 @@
     font-family: sans-serif;
     color: #000;
     transition: color .15s linear;
+
     &:hover {
       color: darkred;
       cursor: alias;
     }
-    
+
   }
 
   .moviePoster {
-    cursor: pointer;  
+    cursor: pointer;
     height: 93%;
     width: 100%;
   }

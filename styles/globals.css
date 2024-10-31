@@ -16,3 +16,28 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
   gap: 20px;
 }
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 50%;
+  translate: -50% -50%;
+  background-size: contain;
+}
+
+.error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  h2 {
+    color: darkred;
+  }
+}
+
+.notFilms {
+  font-family: sans-serif;
+  width: 100%;
+  position: absolute;
+}

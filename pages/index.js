@@ -1,5 +1,4 @@
-import SearchFilms from "@/components/SearchFilms";
-import SmartInput from "@/components/SmartInput/SmartInput";
+import {SearchFilms} from "@/components/SearchFilms";
 import Head from "next/head";
 
 

@@ -1,13 +1,17 @@
-import classes from "@/components/CardFilm/CardFilm.module.css";
+import classes from "@/components/CardFilm/CardFilms.module.css";
+import { memo } from "react";
 
-export default function CardFilm({user}) {
-  const
-    {imdbID,Title,Poster} = user;
+export const CardFilms = memo(function CardFilms({ films, onFilmClick }) {
+  console.log('Render grid films');
 
-  return (
-    <div className={classes.previewMovie}>
-      <img className={classes.moviePoster} src={Poster} alt="Poster"/>
-      <a href={`https://www.imdb.com/title/${imdbID}`}>{Title}</a>
-    </div>
-  )
-}
+  if (films) {
+    return films.map(film => {
+      const
+        { imdbID, Title, Poster } = film;
+      return <div key={Title} onClick={() => onFilmClick(imdbID)} className={classes.previewMovie}>
+        <img className={classes.moviePoster} src={Poster} alt="Poster" />
+        <a href={`https://www.imdb.com/title/${imdbID}`}>{Title}</a>
+      </div>
+    })
+  }
+})
